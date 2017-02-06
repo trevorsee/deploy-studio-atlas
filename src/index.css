@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+.f7 { font-size: .75rem; }
+.f8 { font-size: .625rem; }
+
+.bg-green {
+  background: #9AFAB7;
+}
