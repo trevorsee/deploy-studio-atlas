@@ -69,7 +69,7 @@ var StudioNode = React.createClass({
     var that = this;
     setTimeout(function () {
       that.setState({click: false});
-    }, 100);
+    }, 200);
   },
   render: function(){
     var margin = 40;

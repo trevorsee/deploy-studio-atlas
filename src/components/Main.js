@@ -16,8 +16,8 @@ function Navigation (props){
 
 function Footer (props){
   return (
-    <footer className="fixed bottom-1 right-1">
-      <a href="#" className="black dim">about</a>
+    <footer className="fixed bottom-1 pa2 right-1 bg-white">
+      <a href="https://github.com/trevorsee/deploy-studio-atlas" className="black dim">about</a>
     </footer>
   )
 }
