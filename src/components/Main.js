@@ -1,4 +1,5 @@
 var React = require('react');
+import Searchbar from '../components/Searchbar'
 
 //probably wants to be refactored
 function Navigation (props){
@@ -7,7 +8,7 @@ function Navigation (props){
       <h1 className="f5 fw1 pl4 mt0">Studio Atlas</h1>
       <div className="pr4">
         <label>search keywords:</label>
-        <input type="text"></input>
+        <Searchbar />
       </div>
     </nav>
   )
