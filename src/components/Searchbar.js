@@ -2,6 +2,7 @@ import Search from 'react-search'
 import ReactDOM from 'react-dom'
 import React, { Component, PropTypes } from 'react'
 var FontAwesome = require('react-fontawesome');
+var json = require('../data/data_meta.json');
 
 
 class Searchbar extends Component {
@@ -11,10 +12,7 @@ class Searchbar extends Component {
   }
 
   render () {
-    let items = [
-      { id: 0, value: '...' },
-      { id: 1, value: '...' }
-    ]
+    let items = json
 
     return (
       <div>
