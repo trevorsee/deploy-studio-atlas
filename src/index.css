@@ -21,16 +21,11 @@
   position: relative;
 }
 .autocomplete__input {
-  border: 0 !important;
-  background: transparent !important;
   border-radius: 0;
   box-shadow: none;
-  font-size: 1.5rem;
-  height: 25px;
-  line-height: normal;
-  margin: 1px 0;
+  font-size: 1rem;
   outline: 0;
-  padding: 0;
+  padding: .3rem 1rem;
   position: relative;
   width: 100%;
 }
@@ -39,7 +34,7 @@
 }
 .autocomplete__items {
   margin: 0;
-  padding: 0.4rem;
+  padding: 0;
 }
 .autocomplete__item {
   cursor: pointer;
@@ -47,6 +42,7 @@
   list-style: none;
   margin: 0;
   margin-bottom: 0.3rem;
+  /*border-bottom: 1px solid black;*/
   padding: 0.5rem;
 }
 .autocomplete__item--selected, .autocomplete__item:hover, .autocomplete__item:visited {
@@ -64,7 +60,7 @@
 }
 .autocomplete__item span {
   flex: 1;
-  font-size: 1.5rem;
+  font-size: 1rem;
   word-wrap: break-word;
 }
 .autocomplete__item__dropdown {
@@ -72,7 +68,6 @@
 }
 .autocomplete__menu {
   background: white;
-  box-shadow: 0.1rem 0.1rem 3rem rgba(0, 0, 0, 0.25);
   display: block;
   line-height: 1.5em;
   max-height: 30rem;

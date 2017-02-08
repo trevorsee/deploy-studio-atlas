@@ -1,6 +1,8 @@
 import Search from 'react-search'
 import ReactDOM from 'react-dom'
 import React, { Component, PropTypes } from 'react'
+var FontAwesome = require('react-fontawesome');
+
 
 class Searchbar extends Component {
 
@@ -10,18 +12,15 @@ class Searchbar extends Component {
 
   render () {
     let items = [
-      { id: 0, value: 'ruby' },
-      { id: 1, value: 'javascript' },
-      { id: 2, value: 'lua' },
-      { id: 3, value: 'go' },
-      { id: 4, value: 'julia' }
+      { id: 0, value: '...' },
+      { id: 1, value: '...' }
     ]
 
     return (
       <div>
         <Search items={items}
-                placeholder='Pick your language'
-                maxSelected={3}
+                placeholder=''
+                maxSelected={1}
                 multiple={true}
                 onItemsChanged={this.HiItems.bind(this)} />
       </div>
