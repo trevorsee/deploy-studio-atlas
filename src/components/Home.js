@@ -29,7 +29,7 @@ var Website = React.createClass({
 var StudioName = React.createClass({
   render: function(){
     return (
-      <div className="bg-white pa3 ba lh-copy">
+      <div className="bg-white mh3 pa2 border-box lh-copy">
         <div className="f7">{this.props.name}</div>
         <div className="f8">{this.props.location}</div>
       </div>
@@ -65,7 +65,11 @@ var StudioNode = React.createClass({
     this.setState({click: true});
   },
   closeFocus: function(){
-    this.setState({click: false});
+    //delay to allow link-clicking
+    var that = this;
+    setTimeout(function () {
+      that.setState({click: false});
+    }, 100);
   },
   render: function(){
     var margin = 40;
@@ -115,15 +119,15 @@ var InfoBox = React.createClass({
     console.log(this.props.show)
     if(this.props.show){
       return (
-        <div className="bg-green w5 ba pa3 self-start ">
+        <div className="bg-green border-box w5 ba pa3 mt3 self-start ">
           <h1 className="f5 ma0 flex justify-between">
             {this.props.studio.name}
-            <a href="#" className="dim link dark-gray f8">
+            <a href={this.props.studio.url} className="dim link dark-gray f8">
               <FontAwesome name='external-link' />
             </a>
           </h1>
-          <p className="f7">{this.props.location}</p>
-          <h3 className="mt2 mb1 f6">keywords:</h3>
+          <p className="f7 mt1">{this.props.location}</p>
+          <h3 className="mt3 mb1 f6 fw1">keywords:</h3>
           <ul className="list f7 flex flex-wrap ">
             {this.props.studio.tags.map(function(item){
               return <li><a className="dim dark-gray ma1" href="#">{item}</a></li>;

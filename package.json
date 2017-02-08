@@ -9,8 +9,13 @@
   },
   "dependencies": {
     "react": "^15.4.2",
+    "react-bootstrap-typeahead": "^1.0.0-beta5",
     "react-dom": "^15.4.2",
-    "react-fontawesome": "^1.5.0"
+    "react-fontawesome": "^1.5.0",
+    "react-search": "^2.0.5",
+    "react-search-input": "^0.10.4",
+    "react-simple-typeahead": "^0.1.1",
+    "react-typeahead-component": "^0.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
