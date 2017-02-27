@@ -29,7 +29,7 @@ var Website = React.createClass({
 var StudioName = React.createClass({
   render: function(){
     return (
-      <div className="bg-white mh3 pa2 border-box lh-copy">
+      <div className="bg-dark-gray mh3 pa2 border-box lh-copy">
         <div className="f7">{this.props.name}</div>
         <div className="f8">{this.props.location}</div>
       </div>
@@ -122,7 +122,7 @@ var InfoBox = React.createClass({
     console.log(this.props.show)
     if(this.props.show){
       return (
-        <div className="bg-green border-box w5 ba pa3 mt3 self-start ">
+        <div className="bg-green border-box w5 ba pa3 mt3 self-start dark-gray">
           <h1 className="f5 ma0 flex justify-between">
             {this.props.studio.name}
             <a href={this.props.studio.url} className="dim link dark-gray f8">

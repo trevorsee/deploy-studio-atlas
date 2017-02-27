@@ -4,7 +4,7 @@ import Searchbar from '../components/Searchbar'
 //probably wants to be refactored
 function Navigation (props){
   return (
-    <nav className="fixed z-1 w-100 flex items-center bg-white justify-between pv3">
+    <nav className="fixed z-1 w-100 flex items-center bg-dark-gray justify-between pv3">
       <h1 className="f5 fw1 pl4 ma0">Studio Atlas</h1>
       <div className="pr4 flex items-center">
         <label className="mr2">search keywords:</label>
@@ -40,7 +40,7 @@ var Main = React.createClass({
     return (
       <div className='main-container'>
         <Navigation search={this.search} />
-        {React.cloneElement(this.props.children,this.state)} 
+        {React.cloneElement(this.props.children,this.state)}
         <Footer />
       </div>
     )
