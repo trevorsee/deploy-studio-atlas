@@ -8,7 +8,8 @@ var json = require('../data/data_meta.json');
 class Searchbar extends Component {
 
   HiItems(items) {
-    console.log(items)
+    this.props.search(items[0].value);
+    console.log('called');
   }
 
   render () {

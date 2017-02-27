@@ -55,7 +55,8 @@ var StudioNode = React.createClass({
   getInitialState: function (){
     return {
       hover: false,
-      click: false
+      click: false,
+      active: true
     };
   },
   toggleHover: function(){
@@ -72,6 +73,8 @@ var StudioNode = React.createClass({
     }, 200);
   },
   render: function(){
+    console.log(this.props.studio.tags.indexOf(this.props.searchText));
+    console.log(this.state.active);
     var margin = 40;
     var x = convertToRange(this.props.studio.x,[0,1],[0+margin,this.props.cw-margin-200]);
     var y = convertToRange(this.props.studio.y,[0,1],[0+margin,this.props.ch-margin-143]);
@@ -159,13 +162,14 @@ var Home = React.createClass({
   },
 
   render: function () {
+    console.log(this.props.searchText);
     var cw = 6000;
     var ch = 3000;
     var containerStyles = { width: cw+'px', height: ch+'px'};
     return (
       <main style={containerStyles} className="flex flex-wrap relative">
         {json.map(function(studio, i){
-          return <StudioNode studio={studio} cw={cw} ch={ch}/>
+          return <StudioNode studio={studio} cw={cw} ch={ch} searchText='believe'/>
         })}
       </main>
     )

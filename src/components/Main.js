@@ -8,7 +8,7 @@ function Navigation (props){
       <h1 className="f5 fw1 pl4 ma0">Studio Atlas</h1>
       <div className="pr4 flex items-center">
         <label className="mr2">search keywords:</label>
-        <Searchbar />
+        <Searchbar search={props.search} />
       </div>
     </nav>
   )
@@ -23,11 +23,24 @@ function Footer (props){
 }
 
 var Main = React.createClass({
+
+  getInitialState: function (){
+    return {
+      searchText: ''
+    };
+  },
+
+  search: function(text){
+    this.setState({
+      searchText: text
+    })
+  },
+
   render: function () {
     return (
       <div className='main-container'>
-        <Navigation />
-        {this.props.children}
+        <Navigation search={this.search} />
+        {React.cloneElement(this.props.children,this.state)} 
         <Footer />
       </div>
     )
