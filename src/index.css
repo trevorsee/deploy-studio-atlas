@@ -14,6 +14,15 @@
   background: #9AFAB7;
 }
 
+.neg-z {
+  z-index: -100;
+}
+
+.inactivebg {
+  border: white 1px solid;
+  background: #555;
+}
+
 
 /* styles for search */
 .autocomplete {
@@ -51,12 +60,12 @@
 }
 .autocomplete__item--disabled {
   background-color: white;
-  color: buttonface;
+  color: green;
   opacity: 0.5;
 }
 .autocomplete__item--disabled:hover {
   background-color: white;
-  color: buttonface;
+  color: green;
 }
 .autocomplete__item span {
   flex: 1;
@@ -79,6 +88,7 @@
   width: 100%;
   visibility: visible;
   z-index: 100;
+  color: black;
 }
 .autocomplete__menu--wrap {
   position: relative;

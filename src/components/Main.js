@@ -26,7 +26,7 @@ var Main = React.createClass({
 
   getInitialState: function (){
     return {
-      searchText: ''
+      searchText: 'default'
     };
   },
 

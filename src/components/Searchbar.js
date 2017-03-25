@@ -1,7 +1,6 @@
 import Search from 'react-search'
 import ReactDOM from 'react-dom'
 import React, { Component, PropTypes } from 'react'
-var FontAwesome = require('react-fontawesome');
 var json = require('../data/data_meta.json');
 
 
@@ -12,7 +11,7 @@ class Searchbar extends Component {
     console.log('called');
   }
 
-  render () {
+  render() {
     let items = json
 
     return (
