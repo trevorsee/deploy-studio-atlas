@@ -74,10 +74,10 @@ var StudioNode = React.createClass({
     }, 200);
   },
   componentWillReceiveProps: function(nextProps) {
-    if (this.props.studio.tags.indexOf(nextProps.searchText) == -1){
-      this.setState({active: false});
-    } else {
+    if (this.props.studio.tags.indexOf(nextProps.searchText) != -1 || nextProps.searchText == ''){
       this.setState({active: true});
+    } else {
+      this.setState({active: false});
     };
   },
   render: function(){
